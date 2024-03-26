@@ -1,0 +1,24 @@
+body {
+	backgroung: lightcyan;
+	width: 800px;
+	margin: 200px auto;
+
+}
+h1 {
+	color: maroon;
+	  text-align: center;
+
+}
+p {
+	color: #ff0000;
+	border: 1px solid gray;
+	padding: 10px;
+
+}
+
+div {
+	border: 5px solid maroon;
+	text-align: center;
+	padding: 5px;
+
+}
