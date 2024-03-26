@@ -1,24 +1,31 @@
 body {
-	backgroung: lightcyan;
-	width: 800px;
-	margin: 200px auto;
-
+    background: lightcyan;
+    width: 800px;
+    margin: 200px auto;
 }
+
 h1 {
-	color: maroon;
-	  text-align: center;
-
+    color: maroon;
+    text-align: center;
 }
-p {
-	color: #ff0000;
-	border: 1px solid gray;
-	padding: 10px;
 
+p {
+    color: #ff0000;
+    border: 1px solid gray;
+    padding: 10px;
 }
 
 div {
-	border: 5px solid maroon;
-	text-align: center;
-	padding: 5px;
+    border: 5px solid maroon;
+    text-align: center;
+    padding: 5px;
+}
 
+a {
+    color: red; /* Added style for links */
+}
+
+ol {
+    border: 5px solid darksalmon; /* Added style for ordered list */
+    border-radius: 10px;
 }
