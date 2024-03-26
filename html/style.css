@@ -21,9 +21,6 @@ div {
     padding: 5px;
 }
 
-a {
-    color: red; /* Added style for links */
-}
 
 ol {
     border: 5px solid darksalmon; /* Added style for ordered list */
