@@ -1,35 +1,33 @@
 $(document).ready(function() {
-    // Consolidated function for adding comments
-    var addCommentFromInputBox = function() {
-        var commentText = $(".comment-input input").val().trim(); // Retrieve and trim input
-
-        // Check for empty input
+    // Function to add a comment
+    function addComment() {
+        var commentText = $(".comment-input input").val().trim();
         if (commentText === "") {
-            alert("Please enter a comment before posting."); // Alert for empty comment
-            return; // Prevents further execution for empty input
+            alert("Please enter a comment before posting.");
+            return;
         }
-
-        // Create and hide new comment element for fade-in effect
         var $new_comment = $("<p>").text(commentText).hide();
-
-        // Append new comment to the comments section and apply fade-in effect
         $(".comments").append($new_comment);
         $new_comment.fadeIn();
+        $(".comment-input input").val(""); // Clear the input field after posting
+    }
 
-        // Clear the input field after posting
-        $(".comment-input input").val("");
-    };
-
-    // Event listener for the click event on the submit button
-    $(".comment-input button").on("click", function(event) {
-        addCommentFromInputBox(); // Call the consolidated function
+    // Event listener for adding a comment
+    $(".add-comment").on("click", addComment);
+    $(".comment-input input").on("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            addComment();
+        }
     });
 
-    // Event listener for the keypress event in the input field
-    $(".comment-input input").on("keypress", function(event) {
-        if (event.key === "Enter") { // Check if the "Enter" key was pressed
-            event.preventDefault(); // Prevent the default form submission action
-            addCommentFromInputBox(); // Call the consolidated function
-        }
+    // Event listener for the Clear button
+    $(".clear-input").on("click", function() {
+        $(".comment-input input").val(""); // Reset the input box
+    });
+
+    // Event listener for the Remove all button
+    $(".remove-all").on("click", function() {
+        $(".comments").empty(); // Remove all posts
     });
 });

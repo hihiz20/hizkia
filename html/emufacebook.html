@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmuFacebook</title>
-    <link rel="stylesheet" href="stylesheets/style.css"> <!-- Ensure this points to your actual CSS file -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery included here -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <section class="comment-input">
         <p>Add Your Comment:</p>
         <input type="text">
-        <button>+</button> 
+        <button class="add-comment">+</button> 
+        <button class="clear-input">Clear</button>
+        <button class="remove-all">Remove all</button>
     </section>
 
     <section class="comments">
         <p>This is the first comment!</p>
-        <!-- New comments will be added here -->
+        <!-- Additional comments will be added here -->
     </section>
 
-    <script src="javascripts/app.js"></script> <!-- Custom script correctly placed at the end -->
+    <script src="javascripts/app.js"></script>
 </body>
 </html>
