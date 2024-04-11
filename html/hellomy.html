@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello My HTML Page</title>
+    <title>Hello My HTML Page</title>
+    <!-- Include jQuery from a CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<h1>Hello, Hizkia Permata!</h1>
+    <!-- Your content will be added by jQuery, so no need for extra HTML here -->
+
+    <script>
+    // Your JavaScript code goes here
+    var main = function () { 
+        "use strict"; 
+
+        // create and hide our content as a div
+        var $content = $("<div>Hello World!</div>").hide();
+        var $moreContent = $("<div>Goodbye World!</div>").hide(); 
+
+        // append the content to the body element
+        $("body").append($content);
+
+        // slide the content down for 2 seconds, then fade in the second content
+        $content.slideDown(2000, function() {
+            // This callback function is executed after the slideDown animation completes
+
+            // append the second content to the body 
+            $("body").append($moreContent);
+            
+            // fade in the second content
+            $moreContent.fadeIn();
+        });
+    }
+    $(document).ready(main);
+    </script>
 </body>
 </html>
-
