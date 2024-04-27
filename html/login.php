@@ -2,7 +2,6 @@
 $errors = array();
 $form_data = array();
 
-// Assuming hardcoded credentials for demonstration
 $valid_credentials = array(
     "username" => "user",
     "password" => "pass"
