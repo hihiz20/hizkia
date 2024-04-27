@@ -1,4 +1,5 @@
-// The array of to-dos
+Reference. Stackoverflow, w3schools, and quora.com
+
 var toDos = [
     "study jquery",
     "watch captain marvel",
@@ -8,21 +9,15 @@ var toDos = [
     "change the world"
 ];
 
-// Event handlers for tab functionality
 $(document).ready(function() {
     $(".tabs a span").click(function() {
         var $this = $(this);
-
-        // Remove the 'active' class from all tabs
         $(".tabs span").removeClass("active");
-
-        // Add the 'active' class to the clicked tab
         $this.addClass("active");
 
-        // Empty the content and reset the main content
         $("main .content").empty();
 
-        // Switch to the appropriate tab content
+       
         if ($this.parent().is(":nth-child(1)")) {
             renderToDos(toDos.slice().reverse()); // Newest first
         } else if ($this.parent().is(":nth-child(2)")) {
@@ -38,7 +33,7 @@ $(document).ready(function() {
     $(".tabs a:nth-child(1) span").click();
 });
 
-// Render to-dos in the content area
+
 function renderToDos(todos) {
     var $content = $("<ul>");
     todos.forEach(function(todo) {
