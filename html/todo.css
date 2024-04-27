@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tabs span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+}
+
+.tabs span.active {
+    background: #eee;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content div {
+    margin-top: 10px;
+}
+
+.content input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.content button {
+    padding: 5px;
+    cursor: pointer;
+}
