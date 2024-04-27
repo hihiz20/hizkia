@@ -1,0 +1,29 @@
+/* CSS styles for the input field and button */
+input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for the image container */
+#imageContainer {
+    margin-top: 20px;
+}
+
+/* Styling for the images */
+img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
